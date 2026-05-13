@@ -41,5 +41,17 @@ Convert components into imperative DOM operations at build time
 
 ## Examples in react codebase
 
+- Hydration API: [hydrateRoot docs](https://react.dev/reference/react-dom/client/hydrateRoot)
+- Client root setup: [ReactDOMRoot.js](https://github.com/facebook/react/blob/main/packages/react-dom/src/client/ReactDOMRoot.js)
+- Fiber data structure: [ReactFiber.js](https://github.com/facebook/react/blob/main/packages/react-reconciler/src/ReactFiber.js)
+- Work loop and scheduling: [ReactFiberWorkLoop.js](https://github.com/facebook/react/blob/main/packages/react-reconciler/src/ReactFiberWorkLoop.js)
+- Reconciliation and child diffing: [ReactFiberBeginWork.js](https://github.com/facebook/react/blob/main/packages/react-reconciler/src/ReactFiberBeginWork.js) and [ReactChildFiber.js](https://github.com/facebook/react/blob/main/packages/react-reconciler/src/ReactChildFiber.js)
+- Hooks and effects: [ReactFiberHooks.js](https://github.com/facebook/react/blob/main/packages/react-reconciler/src/ReactFiberHooks.js)
+
+- `ReactDOMRoot.js` is where `createRoot` and `hydrateRoot` enter the system.
+- `ReactFiberWorkLoop.js` is how updates are scheduled and processed.
+- `ReactFiberBeginWork.js` and `ReactChildFiber.js` when you want to understand reconciliation and list diffs.
+- `ReactFiber.js` when you want the actual Fiber node shape and fields.
+- `ReactFiberHooks.js` when you want to connect `useState`, `useEffect`, and other hooks to the reconciler.
 
 
